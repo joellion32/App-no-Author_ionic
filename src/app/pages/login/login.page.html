@@ -1,0 +1,46 @@
+<div class="page-header header-filter" style="background-image: url('../assets/img/bg7.jpg'); background-size: cover; background-position: top center;">
+  <!--Login-->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 ml-auto mr-auto">
+          <div class="card card-login">
+            <form class="form" (ngSubmit)="login(Flogin)"  #Flogin="ngForm">
+              <div class="card-header card-header-primary text-center">
+                <h4 class="card-title">Iniciar Sesión</h4>
+              </div>
+              <p class="description text-center">No Author</p>
+              <div class="card-body">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="material-icons">mail</i>
+                    </span>
+                  </div>
+                  <input type="email" name="email" [(ngModel)]="loginUser.email" class="form-control" placeholder="Email..." required>
+                </div>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="material-icons">lock_outline</i>
+                    </span>
+                  </div>
+                  <input type="password" name="password" [(ngModel)]="loginUser.password" class="form-control" placeholder="Password..." required>
+                </div>
+              </div>
+              <div class="footer text-center">
+                <ion-button type="submit" color="tertiary" expand="block" fill="clear" shape="round">
+                  Iniciar Sesión
+                </ion-button>
+
+                <br><br><br>
+                <ion-label>No estas registrado</ion-label>
+                <ion-button (click)="viewRegister()" color="tertiary" expand="block" fill="clear" shape="round">
+                  Registrate
+                </ion-button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div><!--end container-->
+</div>
